@@ -12,6 +12,18 @@
   	<li id="active">JavaScript</li>
 	</ul>
 
+	<a id="anchor" href="https://www.google.co.kr/">
+		google
+	</a>
+
+	<ul>
+  	<li>HTML</li>
+  	<li>CSS</li>
+  	<li id="list">JavaScript</li>
+	</ul>
+	
+	<input type="button" id="button" value="button"> <br>
+
 	<script>
 		var li = document.getElementById('active');
     alert(li.constructor.name); // HTMLLIElement
@@ -26,6 +38,29 @@
     //HTMLCollection (유사배열)
     document.write(lis.constructor.name+"<br>");
     //HTMLCollection (유사배열)
+
+    var target = document.getElementById('list');
+
+    alert(target.constructor.name); // HTMLLIElement
+    console.log(target.constructor.name); // HTMLLIElement
+    document.write(target.constructor.name+"<br>");
+    // HTMLLIElement
+ 
+    var target = document.getElementById('anchor');
+
+    alert(target.constructor.name); // HTMLAnchorElement
+    console.log(target.constructor.name); 
+    // HTMLAnchorElement
+    document.write(target.constructor.name+"<br>");
+    // HTMLAnchorElement
+
+    var target = document.getElementById('button');
+
+    alert(target.constructor.name); // HTMLInputElement
+    console.log(target.constructor.name); 
+    // HTMLInputElement
+    document.write(target.constructor.name+"<br>");
+    // HTMLInputElement
 	</script>
 </body>
 </html>

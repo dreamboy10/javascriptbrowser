@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>javascriptbrowser - jqueryapi</title>
+	<script src="jquery-3.6.0.min.js"></script>
+</head>
+<body>
+	<a id="target" href="https://www.naver.com/">naver</a>
+
+	<a id="t1" href="./demo2.html">jsbrowser</a>
+	<input id="t2" type="checkbox" checked="checked">
+
+	<div id="t1">dreamboy</div>
+	<div id="t2">dreamboy</div>
+
+	<ul>
+  	<li class="marked">html</li>
+  	<li>css</li>
+  	<li id="active">JavaScript
+    	<ul>
+     		<li>JavaScript Core</li>
+     		<li class="marked">DOM</li>
+     		<li class="marked">BOM</li>
+    	</ul>
+		</li>
+	</ul>
+
+	<script>
+		var t = $('#target');
+		alert(t.attr('href'));
+		console.log(t.attr('href'));
+		document.write(t.attr('href')+"<br>");
+
+		t.attr('title', 'naver.com');
+		t.removeAttr('title');
+
+		var t1 = $('#t1');
+
+		alert(t1.attr('href'));
+		console.log(t1.attr('href'));
+		document.write(t1.attr('href'));
+
+		alert(t1.prop('href'));
+		console.log(t1.prop('href'));
+		document.write(t1.prop('href'));
+ 
+		var t2 = $('#t2');
+
+		alert(t2.attr('checked'));
+		console.log(t2.attr('checked'));
+		document.write(t2.attr('checked'));
+
+		alert(t2.prop('checked'));
+		console.log(t2.prop('checked'));
+		document.write(t2.prop('checked'));
+
+		$('#t1').prop('className', 'important'); 
+		$('#t2').prop('class', 'current');
+
+		// $( ".marked", "#active").
+		// 	css( "background-color", "red" );
+
+		// $( "#active .marked").
+		// 	css( "background-color", "red" );
+
+		// $('#active').find('.marked').css("background-color", 
+		// 	"red");
+
+		$('#active').css('color','blue').find('.marked').css( "background-color", "red" );
+	</script>
+</body>
+</html>

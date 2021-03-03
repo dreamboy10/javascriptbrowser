@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>javascriptbrowser - text</title>
+</head>
+<body>
+	<p id="target1"><span>Hello world</span></p>
+	<p id="target2">
+  	<span>Hello world</span>
+	</p>
+
+	<ul>
+    <li id="target">html</li> 
+    <li>css</li>
+    <li>JavaScript</li>
+	</ul>
+
+	<script>
+		var t1 = document.getElementById('target1').firstChild;
+		var t2 = document.getElementById('target2').firstChild;
+ 
+		console.log(t1.firstChild.nodeValue);
+		try{
+    	console.log(t2.firstChild.nodeValue);   
+		} catch(e){
+    	console.log(e);
+		}
+		console.log(t2.nextSibling.firstChild.nodeValue);
+
+		var t = document.getElementById('target').firstChild;
+    console.log(t.nodeValue);
+    console.log(t.data);
+	</script>
+</body>
+</html>

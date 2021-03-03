@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>javascriptbrowser - jqueryobject</title>
+	<script src="jquery-3.6.0.min.js"></script>
+</head>
+<body>
+	<ul>
+  	<li>html</li>
+  	<li>css</li>
+  	<li>JavaScript</li>
+	</ul>
+
+	<script>
+		/*
+		alert($('li').length+"<br>");
+		console.log($('li').length+"<br>");
+		document.write($('li').length+"<br>");
+
+    alert($('li')[0]);
+    console.log($('li')[0]);
+    document.write($('li')[0]+"<br>");
+
+    var li = $('li');
+    for(var i=0; i<li.length; i++){
+    	alert(li[i]);
+    	console.log(li[i]);
+    	document.write(li[i]+"<br>");
+    }
+    */
+
+    var li = $('li');
+    li.map(function(index, elem){
+    	alert(index, elem);
+    	console.log(index, elem);
+    	document.write(index, elem+"<br>");
+    	$(elem).css('color', 'red');
+    })
+	</script>	
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>javascriptbrowser - htmlelement</title>
+</head>
+<body>
+	<ul>
+  	<li>HTML</li>
+  	<li>CSS</li>
+  	<li id="active">JavaScript</li>
+	</ul>
+
+	<script>
+		var li = document.getElementById('active');
+    alert(li.constructor.name); // HTMLLIElement
+    console.log(li.constructor.name); // HTMLLIElement
+    document.write(li.constructor.name+"<br>"); 
+    // HTMLLIElement
+
+    var lis = document.getElementsByTagName('li');
+    alert(lis.constructor.name); 
+    //HTMLCollection (유사배열)
+    console.log(lis.constructor.name); 
+    //HTMLCollection (유사배열)
+    document.write(lis.constructor.name+"<br>");
+    //HTMLCollection (유사배열)
+	</script>
+</body>
+</html>

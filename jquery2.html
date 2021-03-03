@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>javascriptbrowser - jquery2</title>
+	<script src="jquery-3.6.0.min.js"></script>
+</head>
+<body>
+	<div class="target">
+  	content1
+	</div>
+ 
+	<div class="target">
+  	content2
+	</div>
+
+	<div class="target" id="target1">
+  	target 1
+	</div>
+ 
+	<div class="target" id="target2">
+  	target 2
+	</div>
+
+	<div id="source">source</div>
+
+	<!-- <input type="button" value="remove target 1" id="btn1">
+	<input type="button" value="empty target 2" id="btn2"> -->
+
+	<!-- <input type="button" value="replaceAll target 1" 
+		id="btn1">
+	<input type="button" value="replaceWith target 2" 
+		id="btn2"> -->
+
+	<!-- <input type="button" value="clone replaceAll target 1" 
+		id="btn1">
+	<input type="button" value="clone replaceWith target 2" 	id="btn2"> -->
+
+	<input type="button" value="append source to target 1" 
+		id="btn1">
+
+	<script>
+		// $('.target').before('<div>before</div>');
+  //  	$('.target').after('<div>after</div>');
+  //  	$('.target').prepend('<div>prepend</div>');
+  //  	$('.target').append('<div>append</div>');
+
+   	// $('#btn1').click(function(){
+    // 	$('#target1').remove();
+    // })
+    // $('#btn2').click(function(){
+    // 	$('#target2').empty();
+    // })
+
+    // $('#btn1').click(function(){
+    // 	$('<div>replaceAll</div>').replaceAll('#target1');
+    // })
+    // $('#btn2').click(function(){
+    // 	$('#target2').replaceWith('<div>replaceWith</div>');
+    // })
+
+    // $('#btn1').click(function(){
+    // 	$('#source').clone().replaceAll('#target1');
+    // })
+    // $('#btn2').click(function(){
+    // 	$('#target2').replaceWith($('#source').clone());
+    // })
+
+    $('#btn1').click(function(){
+    	$('#target1').append($('#source'));
+    })
+	</script>
+</body>
+</html>

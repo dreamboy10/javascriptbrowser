@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>javascriptbrowser - jqueryevent, jqueryapi</title>
+	<script src="jquery-3.6.0.min.js"></script>
+</head>
+<body>
+	<!-- <input type="button" id="pure" value="pure"> <br>
+	<input type="button" id="jquery" value="jQuery"> <br> -->
+
+	<!-- <ul>
+  	<li>
+  		<a href="#">HTML</a>
+  	</li>
+  	<li>
+  		<a href="#">CSS</a>
+  	</li>
+  	<li>
+  		<a href="#">JavaScript</a>
+  	</li>
+	</ul> -->
+
+	<input type="text" id="target">
+	<p id="status"></p>
+	<script>
+		// var target = document.getElementById('pure');
+  //   	if(target.addEventListener){
+  //     	target.addEventListener('click', function(event){
+  //       	alert('pure');
+  //       	console.log('pure');
+  //       });
+  //   	} else {
+  //     	target.attachEvent('onclick', function(event){
+  //       	alert('pure');
+  //       	console.log('pure');
+  //     });
+  //   }
+
+  //   $('#jquery').on('click', function(event){
+  //   	alert('jQuery');
+  //   	console.log('jQuery');
+  //   })
+
+  // $('ul').on('click','a, li', function(event){
+  // 	alert(this.tagName);
+  // 	console.log(this.tagName);
+  // })
+
+  	$('#target').on('focus blur', function(e){
+  		$('#status').html(e.type);
+  	})
+	</script>
+</body>
+</html>

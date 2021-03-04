@@ -3,7 +3,7 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>javascriptbrowser - text</title>
+	<title>javascriptbrowser - text, document</title>
 	<style>
     body{
     	padding:0;
@@ -16,7 +16,7 @@
     }
     #target{
     	width:100px;
-    	height:100px;
+    	height:2000px;
     }
 	</style> 
 </head>
@@ -90,12 +90,17 @@
 			console.log(t.getBoundingClientRect());
 			*/
 
-			var t = document.getElementById('target');
-			console.log(t.getBoundingClientRect());
-			console.log(t.offsetParent);
+			// var t = document.getElementById('target');
+			// console.log(t.getBoundingClientRect());
+			// console.log(t.offsetParent);
+
+			// var t = document.getElementById('target');
+			// console.log('clientWidth:', t.clientWidth, 'clientHeight:', t.clientHeight);
 
 			var t = document.getElementById('target');
-			console.log('clientWidth:', t.clientWidth, 'clientHeight:', t.clientHeight);
+			setInterval(function(){
+    		console.log('getBoundingClientRect : ', t.getBoundingClientRect().top, 'pageYOffset:', window.pageYOffset);
+			}, 1000)
 	</script>
 </body>
 </html>

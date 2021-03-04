@@ -4,9 +4,45 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>javascriptbrowser - event2</title>
+	<!-- <style>
+  	html{border:5px solid red;padding:30px;}
+  	body{border:5px solid green;padding:30px;}
+  	fieldset{border:5px solid blue;padding:30px;}
+  	input{border:5px solid black;padding:30px;}
+	</style> -->
 </head>
 <body>
-	<input type="button" id="target" value="button"> <br>
+	<!-- <input type="button" id="target" value="button"> <br> -->
+
+	<!-- <input type="button" id="target1" value="button1"> <br>
+	<input type="button" id="target2" value="button2"> <br> -->
+
+	<!-- <fieldset>
+  	<legend>event propagation</legend>
+  	<input type="button" id="target" value="target">
+  </fieldset> -->
+
+  <!-- <p>
+  	<label>prevent event on</label><input id="prevent" type="checkbox" name="eventprevent" value="on"> <br>
+	</p>
+	<p>
+  	<a href="http://opentutorials.org" onclick="if(document.getElementById('prevent').checked) return false;">opentutorials</a>
+	</p>
+	<p>
+  	<form action="http://opentutorials.org" onsubmit="if(document.getElementById('prevent').checked) return false;">
+    	<input type="submit"> <br>
+    </form>
+	</p> -->
+
+	<!-- <form id="target" action="result.html">
+  	<label for="name">name</label> <input id="name" type="name">
+    <input type="submit">
+	</form> -->
+
+	<p id="result"></p>
+	<input id="target" type="name">
+
+	<!-- <input id="target" type="name"> -->
 
 	<script>
 	// var t = document.getElementById('target');
@@ -14,12 +50,109 @@
   //   	alert('Hello world');
   //   }
 
-   var t = document.getElementById('target');
-   t.onclick = function(event){
-   		var event = event || window.event;
-   		var target = event.target || event.srcElement;
-   		console.log(target);
-   }
+   // var t = document.getElementById('target');
+   // t.onclick = function(event){
+   // 		var event = event || window.event;
+   // 		var target = event.target || event.srcElement;
+   // 		console.log(target);
+   // }
+
+  //   var t = document.getElementById('target');
+  //   t.addEventListener('click', function(event){
+  //   	alert('Hello world, '+event.target.value);
+  //   });
+
+  //   var t = document.getElementById('target');
+		// 	if(t.addEventListener){
+  //   		t.addEventListener('click', function(event){
+  //       alert('Hello world, '+event.target.value);
+  //   	}); 
+		// 	} else if(t.attachEvent){
+  //   		t.attachEvent('onclick', function(event){
+  //       alert('Hello world, '+event.target.value);
+  //   	})
+		// }
+
+   //  var t = document.getElementById('target');
+   // 	t.onclick = function(event){
+   // 		var event = event || window.event;
+   // 		var target = event.target || event.srcElement;
+   // 		alert(1);
+   // }
+   // t.onclick = function(event){
+   // 		var event = event || window.event;
+   // 		var target = event.target || event.srcElement;
+   // 		alert(2);
+   // }
+
+   // var t1 = document.getElementById('target1');
+   // var t2 = document.getElementById('target2');
+   // function btn_listener(event){
+   // 	switch(event.target.id){
+   //  	case 'target1':
+   //    	alert(1);
+   //    	break;
+   //    case 'target2':
+   //    	alert(2);
+   //    	break;
+   //    }
+   //  }
+   //  t1.addEventListener('click', btn_listener);
+   //  t2.addEventListener('click', btn_listener);
+
+   // function handler(event){
+   // 	var phases = ['capturing', 'target', 'bubbling']
+   // 	console.log(event.target.nodeName, this.nodeName, phases[event.eventPhase-1]);
+   // }
+   // document.getElementById('target').addEventListener('click', handler, true);
+   // document.querySelector('fieldset').addEventListener('click', handler, true);
+   // document.querySelector('body').addEventListener('click', handler, true);
+   // document.querySelector('html').addEventListener('click', handler, true);
+
+   // function handler(event){
+   // 		var phases = ['capturing', 'target', 'bubbling']
+   // 		console.log(event.target.nodeName, this.nodeName, phases[event.eventPhase-1]);
+   // }
+   // function stopHandler(event){
+   // 		var phases = ['capturing', 'target', 'bubbling']
+   // 		console.log(event.target.nodeName, this.nodeName, phases[event.eventPhase-1]);
+   // 		event.stopPropagation();
+   // }
+   // document.getElementById('target').addEventListener('click', handler, false);
+   // document.querySelector('fieldset').addEventListener('click', handler, false);
+   // document.querySelector('body').addEventListener('click', stopHandler, false);
+   // document.querySelector('html').addEventListener('click', handler, false);
+
+   // document.querySelector('a').onclick = function(event){
+   // 	if(document.getElementById('prevent').checked)
+   //  	return false;
+   //  };
+     
+ 		// document.querySelector('form').onclick = function(event){
+   //  	if(document.getElementById('prevent').checked)
+   //    	return false;
+   //  	};
+
+  //  var t = document.getElementById('target');
+	 // t.addEventListener('submit', function(event){
+  //  	if(document.getElementById('name').value.length === 0){
+  //     	alert('Name 필드의 값이 누락 되었습니다');
+  //     	event.preventDefault();
+  //   	}
+		// });
+
+		var t = document.getElementById('target');
+		t.addEventListener('change', function(event){
+  		document.getElementById('result').innerHTML=event.target.value;
+		});
+
+		// var t = document.getElementById('target');
+		// t.addEventListener('blur', function(event){
+  // 		alert('blur');  
+		// });
+		// t.addEventListener('focus', function(event){
+  // 		alert('focus'); 
+		// });
 	</script>
 </body>
 </html>

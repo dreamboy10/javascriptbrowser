@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>javascriptbrowser - jqueryevent</title>
+	<script src="jquery-3.6.0.min.js"></script>
+</head>
+<body>
+	<input type="button" id="pure" value="pure"> <br>
+	<input type="button" id="jquery" value="jQuery"> <br>
+
+	<script>
+		var target = document.getElementById('pure');
+    	if(target.addEventListener){
+      	target.addEventListener('click', function(event){
+        	alert('pure');
+        	console.log('pure');
+        });
+    	} else {
+      	target.attachEvent('onclick', function(event){
+        	alert('pure');
+        	console.log('pure');
+      });
+    }
+
+    $('#jquery').on('click', function(event){
+    	alert('jQuery');
+    	console.log('jQuery');
+    })
+	</script>
+</body>
+</html>

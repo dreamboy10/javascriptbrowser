@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>javascriptbrowser - event2</title>
+</head>
+<body>
+	<input type="button" id="target" value="button"> <br>
+
+	<script>
+	// var t = document.getElementById('target');
+  //   t.onclick = function(){
+  //   	alert('Hello world');
+  //   }
+
+   var t = document.getElementById('target');
+   t.onclick = function(event){
+   		var event = event || window.event;
+   		var target = event.target || event.srcElement;
+   		console.log(target);
+   }
+	</script>
+</body>
+</html>

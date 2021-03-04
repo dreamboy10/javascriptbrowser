@@ -48,6 +48,9 @@
 		</div>
 	</div>
 
+	<input type="button" id="scrollBtn" 
+	value="scrollTo(0, 1000)"> <br>
+
 	<script>
 		// var t1 = document.getElementById('target1').firstChild;
 		// var t2 = document.getElementById('target2').firstChild;
@@ -97,10 +100,18 @@
 			// var t = document.getElementById('target');
 			// console.log('clientWidth:', t.clientWidth, 'clientHeight:', t.clientHeight);
 
-			var t = document.getElementById('target');
-			setInterval(function(){
-    		console.log('getBoundingClientRect : ', t.getBoundingClientRect().top, 'pageYOffset:', window.pageYOffset);
-			}, 1000)
+			// var t = document.getElementById('target');
+			// setInterval(function(){
+   //  		console.log('getBoundingClientRect : ', t.getBoundingClientRect().top, 'pageYOffset:', window.pageYOffset);
+			// }, 1000)
+
+		document.getElementById('scrollBtn').
+		addEventListener('click', function(){
+    	window.scrollTo(0, 1000);
+    })
+
+    console.log('window.innerWidth:', window.innerWidth, 'window.innerHeight:', window.innerHeight);
+		console.log('screen.width:', screen.width, 'screen.height:', screen.height);
 	</script>
 </body>
 </html>

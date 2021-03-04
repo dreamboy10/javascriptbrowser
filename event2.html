@@ -39,10 +39,13 @@
     <input type="submit">
 	</form> -->
 
-	<p id="result"></p>
-	<input id="target" type="name">
+	<!-- <p id="result"></p>
+	<input id="target" type="name"> -->
 
 	<!-- <input id="target" type="name"> -->
+
+	<p id="target">Hello</p>
+	<img src="https://s3-ap-northeast-1.amazonaws.com/opentutorialsfile/course/94.png">
 
 	<script>
 	// var t = document.getElementById('target');
@@ -141,18 +144,13 @@
   //   	}
 		// });
 
-		var t = document.getElementById('target');
-		t.addEventListener('change', function(event){
-  		document.getElementById('result').innerHTML=event.target.value;
-		});
-
 		// var t = document.getElementById('target');
-		// t.addEventListener('blur', function(event){
-  // 		alert('blur');  
+		// t.addEventListener('change', function(event){
+  // 		document.getElementById('result').innerHTML=event.target.value;
 		// });
-		// t.addEventListener('focus', function(event){
-  // 		alert('focus'); 
-		// });
+
+		var t = document.getElementById('target');
+    console.log(t);
 	</script>
 </body>
 </html>
